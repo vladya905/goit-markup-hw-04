@@ -6,6 +6,9 @@
   --accent: #e7e9fc; /* cornflower */
   --light: #f4f4fd; /* cloud */
   --primary-brand: #4d5ae5; /* iris */
+  --light-slate-color: #8e8f99; /* light-slate */
+  --pressed-state-footer: #31d0aa; /* green */
+  --bg-gradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 /**--------------------------RESET-------------------------- */
 p,
@@ -94,6 +97,7 @@ body {
 .button-portfolio:focus {
   color: var(--primary-white);
   background-color: var(--pressed-state);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /**--------------------------HEADER-------------------------- */
 .header {
@@ -183,8 +187,11 @@ body {
 .hero-section {
   background-color: var(--dark);
   padding: 188px 0;
+  background-image: var(--bg-gradient), url(../images/hero-bacground.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-
 .hero-title {
   color: var(--primary-white);
   font-size: 56px;
@@ -196,7 +203,20 @@ body {
   text-align: center;
 }
 /**--------------------------FEATURES-------------------------- */
-
+.feauters-link {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  background-color: var(--light);
+  margin-bottom: 8px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.features-icon {
+  width: 64px;
+  height: 64px;
+}
 .section-subtitle {
   color: var(--dark);
   font-weight: 500;
@@ -233,14 +253,73 @@ body {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-white);
 }
+.soc-link-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.soc-link-item {
+  margin-top: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.soc-link-item:hover,
+.soc-link-item:focus {
+  background-color: var(--pressed-state);
+}
+.soc-link-icon {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+}
+.soc-link {
+  display: flex;
+}
 .team-wrap {
   padding: 32px 0;
   text-align: center;
+}
+/**--------------------------CUSTOMERS-------------------------- */
+.customers-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.customers-item {
+  width: 168px;
+  height: 88px;
+}
+.customers-link {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border: 1px solid var(--light-slate-color);
+  border-radius: 4px;
+}
+.customers-link:is(:hover, :focus) {
+  border-color: var(--pressed-state);
+}
+.customers-link:is(:hover, :focus) .customers-icon {
+  fill: var(--pressed-state);
+}
+.customers-icon {
+  width: 104px;
+  height: 56px;
+  fill: var(--light-slate-color);
 }
 /**--------------------------FOOTER-------------------------- */
 .footer {
   background-color: var(--dark);
   padding: 100px 0;
+}
+.footer-container {
+  display: flex;
 }
 .footer-text {
   color: var(--accent);
@@ -250,8 +329,40 @@ body {
 .span-footer {
   color: var(--light);
 }
-.portfolio-project-text {
-  color: var(--text);
+.footer-soc-wrap {
+  max-width: 208px;
+  margin-left: 120px;
+}
+.soc-title {
+  color: var(--primary-white);
+  font-weight: 500;
+}
+.soc-footer-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.soc-footer-item {
+  margin-top: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.soc-footer-item:hover,
+.soc-footer-item:focus {
+  background-color: var(--pressed-state-footer);
+}
+.soc-footer-link {
+  display: flex;
+}
+.soc-footer-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
 }
 /**--------------------------PORTFOLIO-------------------------- */
 .portfolio {
@@ -264,11 +375,19 @@ body {
   margin-bottom: 72px;
   justify-content: center;
 }
+.portfolio-project-text {
+  color: var(--text);
+}
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .cards-wrap {
   padding-top: 32px;
