@@ -92,6 +92,8 @@ body {
   border: 1px solid var(--accent);
   padding: 12px 24px;
   font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 .button-portfolio:hover,
 .button-portfolio:focus {
